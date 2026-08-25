@@ -1,0 +1,834 @@
+/* =====================================================
+   GENERAL
+===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #f3f6f5;
+
+    color: #263238;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header {
+
+    background:
+        linear-gradient(
+            135deg,
+            #14532d,
+            #166534
+        );
+
+    color: white;
+
+    padding: 18px 25px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    box-shadow:
+        0 2px 8px rgba(0,0,0,0.15);
+
+}
+
+
+.header-left {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+}
+
+
+.logo {
+
+    width: 55px;
+
+    height: 55px;
+
+    border-radius: 12px;
+
+    background:
+        rgba(255,255,255,0.15);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 25px;
+
+}
+
+
+.header h1 {
+
+    margin: 0;
+
+    font-size: 24px;
+
+}
+
+
+.header p {
+
+    margin: 5px 0 0;
+
+    opacity: 0.85;
+
+    font-size: 13px;
+
+}
+
+
+.header-right {
+
+    display: flex;
+
+    flex-direction: column;
+
+    text-align: right;
+
+    gap: 5px;
+
+    font-size: 13px;
+
+}
+
+
+/* =====================================================
+   DASHBOARD
+===================================================== */
+
+.dashboard {
+
+    max-width: 1600px;
+
+    margin: auto;
+
+    padding: 20px;
+
+}
+
+
+/* =====================================================
+   STATISTICS
+===================================================== */
+
+.statistics {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.stat-card {
+
+    background: white;
+
+    padding: 18px;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    box-shadow:
+        0 2px 8px rgba(0,0,0,0.08);
+
+}
+
+
+.stat-icon {
+
+    width: 50px;
+
+    height: 50px;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 20px;
+
+}
+
+
+.stat-icon.blue {
+
+    background: #e3f2fd;
+
+    color: #1976d2;
+
+}
+
+
+.stat-icon.red {
+
+    background: #ffebee;
+
+    color: #d32f2f;
+
+}
+
+
+.stat-icon.orange {
+
+    background: #fff3e0;
+
+    color: #ef6c00;
+
+}
+
+
+.stat-icon.green {
+
+    background: #e8f5e9;
+
+    color: #388e3c;
+
+}
+
+
+.stat-card p {
+
+    margin: 0;
+
+    color: #78909c;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+}
+
+
+.stat-card h2 {
+
+    margin: 5px 0 0;
+
+    font-size: 28px;
+
+}
+
+
+/* =====================================================
+   MAIN LAYOUT
+===================================================== */
+
+.main-layout {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        330px;
+
+    gap: 20px;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* =====================================================
+   MAP
+===================================================== */
+
+.map-section {
+
+    background: white;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 2px 8px rgba(0,0,0,0.08);
+
+}
+
+
+.section-header {
+
+    padding: 15px 20px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    border-bottom: 1px solid #eceff1;
+
+}
+
+
+.section-header h2 {
+
+    margin: 0;
+
+    font-size: 18px;
+
+}
+
+
+.section-header p {
+
+    margin: 5px 0 0;
+
+    color: #78909c;
+
+    font-size: 12px;
+
+}
+
+
+#map {
+
+    width: 100%;
+
+    height: 650px;
+
+}
+
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+.button {
+
+    border: none;
+
+    background: #166534;
+
+    color: white;
+
+    padding: 9px 13px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 12px;
+
+}
+
+
+.button:hover {
+
+    background: #14532d;
+
+}
+
+
+.button.full {
+
+    width: 100%;
+
+    margin-top: 8px;
+
+}
+
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+
+.sidebar {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+}
+
+
+.side-card {
+
+    background: white;
+
+    border-radius: 10px;
+
+    padding: 18px;
+
+    box-shadow:
+        0 2px 8px rgba(0,0,0,0.08);
+
+}
+
+
+.side-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.side-title i {
+
+    color: #166534;
+
+}
+
+
+.side-title h3 {
+
+    margin: 0;
+
+    font-size: 16px;
+
+}
+
+
+/* =====================================================
+   LAYER LIST
+===================================================== */
+
+.layer-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 8px 5px;
+
+    border-bottom: 1px solid #eeeeee;
+
+    font-size: 13px;
+
+}
+
+
+.layer-item:last-child {
+
+    border-bottom: none;
+
+}
+
+
+.layer-item input {
+
+    width: 16px;
+
+    height: 16px;
+
+    cursor: pointer;
+
+}
+
+
+.layer-color {
+
+    width: 13px;
+
+    height: 13px;
+
+    border-radius: 50%;
+
+    display: inline-block;
+
+}
+
+
+.boundary-color {
+
+    width: 20px;
+
+    height: 13px;
+
+    border-radius: 2px;
+
+    border: 3px solid #1b1b1b;
+
+    background: rgba(76,175,80,0.15);
+
+}
+
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+#searchInput {
+
+    width: 100%;
+
+    padding: 11px;
+
+    border: 1px solid #cfd8dc;
+
+    border-radius: 6px;
+
+    outline: none;
+
+}
+
+
+#searchInput:focus {
+
+    border-color: #166534;
+
+}
+
+
+/* =====================================================
+   SELECTED SITE
+===================================================== */
+
+.empty {
+
+    color: #90a4ae;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+}
+
+
+.site-row {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    padding: 7px 0;
+
+    border-bottom: 1px solid #eeeeee;
+
+    font-size: 12px;
+
+}
+
+
+.site-key {
+
+    font-weight: bold;
+
+    color: #78909c;
+
+}
+
+
+.site-value {
+
+    text-align: right;
+
+}
+
+
+/* =====================================================
+   CHARTS
+===================================================== */
+
+.charts {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap: 20px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.chart-card {
+
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 2px 8px rgba(0,0,0,0.08);
+
+}
+
+
+.chart-header h2 {
+
+    margin: 0;
+
+    font-size: 18px;
+
+}
+
+
+.chart-header p {
+
+    color: #78909c;
+
+    font-size: 12px;
+
+}
+
+
+.chart-container {
+
+    height: 320px;
+
+}
+
+
+/* =====================================================
+   CLASSIFICATION SUMMARY
+===================================================== */
+
+.summary-row {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid #eeeeee;
+
+}
+
+
+.summary-left {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+.summary-number {
+
+    font-weight: bold;
+
+    font-size: 18px;
+
+}
+
+
+/* =====================================================
+   PROJECT CARD
+===================================================== */
+
+.project-card {
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 2px 8px rgba(0,0,0,0.08);
+
+}
+
+
+.project-card h2 {
+
+    margin-top: 0;
+
+}
+
+
+.project-card p {
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    color: #546e7a;
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    background: #263238;
+
+    color: #cfd8dc;
+
+    text-align: center;
+
+    padding: 15px;
+
+    font-size: 11px;
+
+}
+
+
+/* =====================================================
+   POPUP
+===================================================== */
+
+.popup-title {
+
+    color: #166534;
+
+    margin-top: 0;
+
+}
+
+
+.popup-table {
+
+    border-collapse: collapse;
+
+    width: 100%;
+
+    font-size: 11px;
+
+}
+
+
+.popup-table td {
+
+    padding: 5px;
+
+    border-bottom: 1px solid #eeeeee;
+
+}
+
+
+.popup-table td:first-child {
+
+    font-weight: bold;
+
+    color: #607d8b;
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    .statistics {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+    .main-layout {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+@media (max-width: 750px) {
+
+    .header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 10px;
+
+    }
+
+    .header-right {
+
+        text-align: left;
+
+    }
+
+    .charts {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .dashboard {
+
+        padding: 10px;
+
+    }
+
+    .statistics {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    #map {
+
+        height: 500px;
+
+    }
+
+}
